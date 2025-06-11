@@ -1,0 +1,37 @@
+{
+   "action": {
+      "default_popup": "index.html",
+      "default_title": "Superpower Google"
+   },
+   "content_scripts": [ {
+      "js": [ "content_start.js" ],
+      "matches": [ "https://www.google.com/*", "https://www.google.fr/*", "https://www.google.ca/*", "https://www.google.co.uk/*", "https://www.google.de/*", "https://www.google.it/*", "https://www.google.es/*", "https://www.google.nl/*", "https://www.google.com.au/*", "https://www.google.com.br/*", "https://www.google.co.in/*", "https://www.google.co.jp/*", "https://www.google.com.hk/*", "https://www.google.com.sg/*", "https://www.google.ru/*", "https://www.google.com.tr/*", "https://www.google.com.mx/*", "https://www.google.pl/*", "https://www.google.se/*", "https://www.google.ch/*", "https://www.google.be/*", "https://www.google.co.kr/*", "https://www.google.co.za/*", "https://www.google.ae/*", "https://www.google.ie/*", "https://www.google.dk/*", "https://www.google.no/*", "https://www.google.fi/*", "https://www.google.pt/*", "https://www.google.gr/*", "https://www.google.cz/*", "https://www.google.hu/*", "https://www.google.ro/*", "https://www.google.sk/*", "https://www.google.bg/*", "https://www.google.si/*", "https://www.google.hr/*", "https://www.google.lt/*", "https://www.google.lv/*", "https://www.google.ee/*" ],
+      "run_at": "document_start"
+   }, {
+      "js": [ "content_end.js" ],
+      "matches": [ "https://www.google.com/*", "https://www.google.fr/*", "https://www.google.ca/*", "https://www.google.co.uk/*", "https://www.google.de/*", "https://www.google.it/*", "https://www.google.es/*", "https://www.google.nl/*", "https://www.google.com.au/*", "https://www.google.com.br/*", "https://www.google.co.in/*", "https://www.google.co.jp/*", "https://www.google.com.hk/*", "https://www.google.com.sg/*", "https://www.google.ru/*", "https://www.google.com.tr/*", "https://www.google.com.mx/*", "https://www.google.pl/*", "https://www.google.se/*", "https://www.google.ch/*", "https://www.google.be/*", "https://www.google.co.kr/*", "https://www.google.co.za/*", "https://www.google.ae/*", "https://www.google.ie/*", "https://www.google.dk/*", "https://www.google.no/*", "https://www.google.fi/*", "https://www.google.pt/*", "https://www.google.gr/*", "https://www.google.cz/*", "https://www.google.hu/*", "https://www.google.ro/*", "https://www.google.sk/*", "https://www.google.bg/*", "https://www.google.si/*", "https://www.google.hr/*", "https://www.google.lt/*", "https://www.google.lv/*", "https://www.google.ee/*" ],
+      "run_at": "document_end"
+   }, {
+      "js": [ "content_chatgpt.js" ],
+      "matches": [ "https://chatgpt.com/*" ],
+      "run_at": "document_idle"
+   } ],
+   "description": "Ajoute de nouvelles fonctionnalités à Google Search.",
+   "host_permissions": [ "https://www.google.com/*", "https://www.google.fr/*", "https://www.google.ca/*", "https://www.google.co.uk/*", "https://www.google.de/*", "https://www.google.it/*", "https://www.google.es/*", "https://www.google.nl/*", "https://www.google.com.au/*", "https://www.google.com.br/*", "https://www.google.co.in/*", "https://www.google.co.jp/*", "https://www.google.com.hk/*", "https://www.google.com.sg/*", "https://www.google.ru/*", "https://www.google.com.tr/*", "https://www.google.com.mx/*", "https://www.google.pl/*", "https://www.google.se/*", "https://www.google.ch/*", "https://www.google.be/*", "https://www.google.co.kr/*", "https://www.google.co.za/*", "https://www.google.ae/*", "https://www.google.ie/*", "https://www.google.dk/*", "https://www.google.no/*", "https://www.google.fi/*", "https://www.google.pt/*", "https://www.google.gr/*", "https://www.google.cz/*", "https://www.google.hu/*", "https://www.google.ro/*", "https://www.google.sk/*", "https://www.google.bg/*", "https://www.google.si/*", "https://www.google.hr/*", "https://www.google.lt/*", "https://www.google.lv/*", "https://www.google.ee/*" ],
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "32": "icon32.png",
+      "48": "icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuH7Z/tdwUOoBknNKX0iAe6ITJYc6NYxcoArlZT24NxRtevRq4+ihjlzWCEpb2QlONerNqZ0zzXGSvmTA5cBgkpqD14IEonokBh7pMcy6/FPImA3GPJOlMYqUoAnDJEVVQvbQG77g60figcJ/CfyhlZgWvBLVBgbLd0qZi7Moaq7+PczsqIZi7R1KNumjvBASercTu/UQO5WYsyklVUKIu+qupIr0w0F7WEEvXJwUj/DStenWSnfmQ8C04pD6MhQyMmCifRJM9QLm6Lly7TTXaKkGF1IL0U0rKigmIjXcaxbmxKt9VLQ0rMfwEwY+J8iunyB+Lns7HDho5wAJny4fZQIDAQAB",
+   "manifest_version": 3,
+   "name": "Superpower Google",
+   "permissions": [ "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.1.2",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "img/chatgpt.svg", "img/clover.svg", "img/chatgpt_dark.svg", "img/clover_dark.svg" ]
+   } ]
+}
