@@ -338,7 +338,7 @@ function startFeaturesIfEnabled() {
     if (result.blockSponsored !== false) runBlockSponsoredFeature();
     if (result.newCategoriesEnabled !== false) runNewCategoriesFeature();
 
-    if (result.searchOperators !== false && result.superpower_activation_code) {
+    if (result.searchOperators !== false) {
       runSearchOperatorsFeature();
     }
   });
